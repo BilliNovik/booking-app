@@ -1,0 +1,49 @@
+.navbar {
+    background-color: #003580;
+    display: flex;
+    justify-content: center;
+    color: white;
+
+    &__container {
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 50px;
+    }
+
+    &__button {
+        margin-left: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        background-color: white;
+        color: #015c91;
+    }
+
+    &__list {
+        display: flex;
+        gap: 30px;
+        margin: 18px 0 15px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        padding: 10px 15px;
+
+        &.active {
+            border: 1px solid white;
+            border-radius: 20px;
+        }
+    }
+}
+
+.logo {
+    font-weight: 500;
+    font-size: 22px;
+}
