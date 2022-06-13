@@ -20,6 +20,7 @@
         background-color: white;
         padding: 0 10px;
         width: 100%;
+        position: relative;
 
         &:last-child {
             padding: 0px;
@@ -30,12 +31,29 @@
     &__input {
         border: none;
         outline: none;
+        font-size: 14px;
+        font-weight: 500;
+
+        &-button {
+            color: black;
+            position: absolute;
+            right: 12px;
+            opacity: 0.6;
+            cursor: pointer;
+        }
+
+        &::placeholder {
+            font-size: 13px;
+            font-size: 400;
+            opacity: 0.7;
+        }
     }
 
     &__text {
         cursor: pointer;
-        font-size: 13px;
-        color: rgb(112 96 112);
+        font-size: 14px;
+        font-weight: 500;
+        color: rgb(0, 0, 0);
     }
 
     &__button {
@@ -50,6 +68,11 @@
 .date {
     position: absolute;
     top: 60px;
+    z-index: 2;
+    left: 28.8%;
+    box-shadow: 0 2px 16px rgb(0 0 0 / 15%);
+    border-radius: 4px;
+    overflow: hidden;
 }
 
 .search__options {
@@ -57,4 +80,5 @@
     top: 60px;
     width: 260px;
     left: 58.4%;
+    z-index: 2;
 }

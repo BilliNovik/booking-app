@@ -1,0 +1,22 @@
+.footer {
+    padding-bottom: 35px;
+
+    &__list {
+        display: flex;
+        gap: 40px;
+        justify-content: space-between;
+        align-items: center;
+
+        &__item {
+            flex: 1;
+        }
+    }
+
+    p {
+        text-align: center;
+        font-size: 12px;
+        padding-bottom: 15px;
+    }
+
+
+}

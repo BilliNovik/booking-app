@@ -1,0 +1,313 @@
+.rdrDateDisplayWrapper,
+.rdrMonthAndYearPickers {
+    display: none;
+}
+
+.rdrMonthAndYearWrapper {
+    height: 0;
+    padding: 0;
+}
+
+.rdrDayHovered {
+    //hover
+    // background-color: green !important;
+}
+
+.rdrCalendarWrapper:not(.rdrDateRangeWrapper) .rdrDayHovered .rdrDayNumber:after {
+    content: '';
+    border: 0 !important;
+    border-radius: 0 !important;
+    position: absolute;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: transparent;
+}
+
+.rdrDayInPreview {
+    //hover
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    right: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+
+    border: none;
+    top: 0px !important;
+    bottom: 0px !important;
+
+    &::after,
+    &::before {
+        display: none !important;
+    }
+
+    &+span {
+        background-color: #f2f2f2 !important;
+
+        &+span {
+            color: #000 !important;
+            z-index: 3 !important;
+        }
+    }
+}
+
+
+.rdrDayStartPreview,
+.rdrDayEndPreview {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    right: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border: none;
+    top: 0px !important;
+    bottom: 0px !important;
+}
+
+.rdrDay .rdrStartEdge {
+    &+span {
+        span {
+            color: white !important;
+        }
+
+    }
+}
+
+.rdrDay .rdrEndEdge {
+    &+span {
+        span {
+            color: white !important;
+        }
+
+    }
+}
+
+.rdrStartEdge {
+    //начало
+    border: none;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    left: 0;
+    top: 0px;
+    bottom: 0px;
+    background-color: #0071c2;
+}
+
+.rdrInRange {
+    //середника
+    background-color: #f2f2f2 !important;
+
+    // &+span {
+    //     color: #000 !important;
+    // }
+
+    &+.rdrDayNumber {
+        span {
+            color: #000 !important;
+        }
+    }
+}
+
+.rdrSelected,
+.rdrInRange,
+.rdrStartEdge,
+.rdrEndEdge {
+    top: 0 !important;
+    bottom: 0 !important;
+}
+
+
+.rdrDayEndOfMonth .rdrInRange,
+.rdrDayEndOfMonth .rdrStartEdge,
+.rdrDayEndOfWeek .rdrInRange,
+.rdrDayEndOfWeek .rdrStartEdge {
+    right: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+.rdrDayStartOfMonth .rdrInRange,
+.rdrDayStartOfMonth .rdrEndEdge,
+.rdrDayStartOfWeek .rdrInRange,
+.rdrDayStartOfWeek .rdrEndEdge {
+
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    left: 0 !important;
+}
+
+.rdrEndEdge {
+    //конец
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    right: 0;
+    background-color: #0071c2;
+    top: 0px;
+    bottom: 0px;
+}
+
+.rdrDay {
+    height: 35px;
+
+    &:hover {
+        .rdrInRange {
+
+            color: #000 !important;
+
+            &+span {
+
+                color: #000 !important;
+            }
+        }
+
+        .rdrDayNumber {
+            color: #000 !important;
+
+            &+span {
+                color: #000 !important;
+            }
+        }
+    }
+}
+
+.rdrNextPrevButton {
+    position: absolute;
+    right: 0;
+    top: 7px
+}
+
+.rdrPprevButton {
+    position: absolute;
+    left: 0;
+    top: 7px
+}
+
+.rdrMonthName {
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: #000;
+    letter-spacing: 0.5px;
+}
+
+.rdrMonth {
+    max-width: 246px;
+}
+
+.rdrDayNumber {
+    height: 35px;
+    top: 0 !important;
+
+    span {
+        font-weight: 500;
+    }
+}
+
+.rdrDateDisplayItem {
+    border: 0 !important;
+
+    input {
+        border: 0 !important;
+    }
+}
+
+.rdrInputRangeInput {
+    border: 0 !important;
+}
+
+///
+/// 
+// .rdrDayHovered .rdrDayNumber:after {
+//     content: '' !important;
+//     border: 1px solid red !important;
+//     border-radius: 1.333em;
+//     position: absolute;
+//     top: -2px;
+//     bottom: -2px;
+//     left: 0px;
+//     right: 0px;
+//     background: transparent;
+// }
+
+.rdrDayHovered {
+
+    &>span {
+
+        /// на этом уровне
+        border: none !important;
+
+        background-color: #f2f2f2;
+
+        &>span {
+            // color: #000;
+            z-index: 3;
+        }
+    }
+
+    .rdrStartEdge {
+        background-color: #0071c2 !important;
+        border: none !important;
+
+        &+span {
+            background-color: #0071c2 !important;
+            border: none !important;
+            right: 0 !important;
+            border-bottom-right-radius: 0 !important;
+            border-top-right-radius: 0 !important;
+            border-top-left-radius: 0 !important;
+            border-bottom-left-radius: 0 !important;
+            left: 0 !important;
+            top: 0 !important;
+            bottom: 0 !important;
+        }
+    }
+
+    .rdrEndEdge {
+        background-color: #0071c2 !important;
+        border: none !important;
+
+        &+span {
+            background-color: #0071c2 !important;
+            border: none !important;
+            right: 0 !important;
+            border-bottom-right-radius: 0 !important;
+            border-top-right-radius: 0 !important;
+            border-top-left-radius: 0 !important;
+            border-bottom-left-radius: 0 !important;
+            left: 0 !important;
+            top: 0 !important;
+            bottom: 0 !important;
+        }
+    }
+}
+
+.rdrDayEndPrev,
+.rdrDayStartPrev {
+
+    &>span {
+
+        /// на этом уровне
+        border: none !important;
+
+        background-color: #f2f2f2;
+
+        &>span {
+            color: #000;
+            z-index: 3;
+        }
+    }
+}
+
+.rdrInRange {
+    &span {
+        background-color: #000 !important;
+    }
+}
+
+.rdrDay:not(.rdrDayPassive) .rdrInRange~.rdrDayNumber span,
+.rdrDay:not(.rdrDayPassive) .rdrSelected~.rdrDayNumber span {
+    color: #000 !important;
+}

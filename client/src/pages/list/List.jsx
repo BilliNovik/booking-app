@@ -4,9 +4,9 @@ import Navbar from '../../components/navbar/Navbar'
 
 const List = () => {
     return (
-        <>
-            <div>2</div>
-        </>
+        <div className='list'>
+
+        </div>
     )
 }
 

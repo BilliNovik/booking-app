@@ -5,7 +5,7 @@ import Search from '../search/Search'
 
 const Header = () => {
     return (
-        <div className='header'>
+        <header className='header'>
             <div className="container header__container">
                 <h1 className='header__title'>
                     A lifetime of discounts? It's Genius.
@@ -21,7 +21,7 @@ const Header = () => {
                     <Search />
                 </div>
             </div>
-        </div >
+        </header >
     )
 }
 
