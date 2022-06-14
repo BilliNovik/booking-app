@@ -2,30 +2,32 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBed, faCalendar, faPerson, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { DateRange } from 'react-date-range'
-import 'react-date-range/dist/styles.css'; // main css file
-import 'react-date-range/dist/theme/default.css'; // theme css file
+import 'react-date-range/dist/styles.css';
+import 'react-date-range/dist/theme/default.css';
 import { format } from 'date-fns'
 
+import searchData from '../../servises/getSearchData'
+import Options from '../options/Options';
 import './search.scss'
 import './dateRange.scss'
-import Options from '../options/Options';
 
 const Search = () => {
     const [openDate, setOpenDate] = React.useState(false)
-    const [searchInput, setSearchInput] = React.useState('')
+    const [searchInput, setSearchInput] = React.useState(searchData.search)
     const [openOptions, setOpenOptions] = React.useState(false)
+
     const [date, setDate] = React.useState([
         {
-            startDate: new Date(),
-            endDate: new Date(),
+            startDate: searchData.startDate,
+            endDate: searchData.endDate,
             key: 'selection'
         }
     ]);
 
     const [options, setOptions] = React.useState({
-        adults: 2,
-        children: 0,
-        room: 1
+        adults: searchData.adults,
+        children: searchData.children,
+        room: searchData.room,
     });
 
     const updateOptions = (value) => {
@@ -42,6 +44,15 @@ const Search = () => {
         }
     }
 
+    const handleSubmit = () => {
+        localStorage.setItem('to', searchInput)
+        localStorage.setItem('date', JSON.stringify(date))
+        localStorage.setItem('people', JSON.stringify(options))
+
+        setOpenOptions(false)
+        setOpenDate(false)
+    }
+
     return (
         <>
             <div className='search'>
@@ -54,8 +65,6 @@ const Search = () => {
                 </div>
                 <div className="search__item">
                     <FontAwesomeIcon icon={faCalendar} className="search__icon" />
-                    {/* <span type="text" className="search__text" >Check-in - Check-out</span> */}
-
                     <span type="text" data-type="date" className="search__text" onClick={handleChange}
                     >{`${format(date[0].startDate, 'EEE, MMM d')} - ${format(date[0].endDate, 'EEE, MMM d')} `}</span>
 
@@ -68,7 +77,7 @@ const Search = () => {
 
                 </div>
                 <div className="search__item">
-                    <button className="search__button header__button">Search</button>
+                    <button className="search__button header__button" onClick={handleSubmit}>Search</button>
                 </div>
             </div>
             {

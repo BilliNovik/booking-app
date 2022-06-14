@@ -12,10 +12,12 @@
 
     &__title {
         font-weight: 400;
+        font-size: 32px;
     }
 
     &__desc {
         margin: 20px 0;
+        font-size: 16px;
     }
 
     &__button {
@@ -24,6 +26,7 @@
         border: none;
         color: white;
         cursor: pointer;
+        font-size: 14px;
         padding: 10px;
     }
 

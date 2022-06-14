@@ -27,6 +27,10 @@
         display: flex;
         gap: 25px;
         margin: 18px 0 15px;
+
+        span {
+            font-size: 16px;
+        }
     }
 
     &__item {

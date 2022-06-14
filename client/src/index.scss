@@ -9,8 +9,13 @@ h1,
 h2,
 button,
 input {
+    font-size: 13px;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+}
+
+button {
+    cursor: pointer;
 }
 
 b {
@@ -34,4 +39,9 @@ b {
     font-size: 22px;
     padding-bottom: 13px;
     font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }

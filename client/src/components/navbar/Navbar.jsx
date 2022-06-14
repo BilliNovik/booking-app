@@ -1,6 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBed, faCar, faPlane, faTaxi } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
 
 import './navbar.scss'
 
@@ -9,7 +10,9 @@ const Navbar = () => {
         <div className='navbar'>
             <div className="container">
                 <div className="navbar__container">
-                    <span className="logo">clonebooking</span>
+                    <Link to='/'>
+                        <span className="logo">clonebooking</span>
+                    </Link>
                     <div className="navbar__items">
                         <button className="navbar__button">Register</button>
                         <button className="navbar__button">Login</button>

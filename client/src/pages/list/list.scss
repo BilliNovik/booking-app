@@ -1,0 +1,115 @@
+.list {
+    &__container {
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+        margin: 0 auto;
+    }
+
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+    }
+
+    &__search {
+        flex: 1;
+        background-color: #febb02;
+    }
+
+    &__result {
+        flex: 3
+    }
+}
+
+.search-block {
+    padding: 16px;
+    max-width: 250px;
+
+    &__title {
+        font-size: 20px;
+        font-weight: 500;
+        padding-bottom: 4px;
+    }
+
+    &__container {
+        font-size: 16px;
+        margin-bottom: 10px;
+
+        p {
+            padding-bottom: 2px;
+        }
+
+        input {
+            margin-right: 5px;
+        }
+    }
+
+    &__align {
+        display: flex;
+        align-items: center;
+    }
+
+    &__period {
+        margin-top: 5px;
+    }
+
+    &__button {
+        width: 100%;
+        height: 36px;
+        position: relative;
+        border: none;
+        padding: 0 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__text {
+        font-size: 16px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    &__icon {
+        width: 22px !important;
+        height: 22px !important;
+        margin-right: 8px;
+
+        &-text {
+            font-size: 10px;
+            position: absolute;
+            left: 12px;
+            top: 15.3px;
+            color: white;
+        }
+    }
+
+    &__general-button {
+        padding: 12px;
+        background-color: #0071c2;
+        border: 0;
+        color: white;
+        width: 100%;
+        font-size: 15px;
+    }
+
+    &__input {
+        width: 100%;
+        outline: transparent;
+        border: none;
+        height: 25px;
+        background-color: #f0f0f0;
+    }
+}
+
+.list-block {
+    padding-top: 7px;
+
+    &__title {
+        font-size: 26px;
+        font-weight: 500;
+        padding-bottom: 10px;
+    }
+}
